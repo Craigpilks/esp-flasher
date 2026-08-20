@@ -1,11 +1,13 @@
 {
-  "name": "Classroom ESP32 Lab",
+  "name": "Blink Test",
   "version": "1.0",
-  "new_install_prompt_erase": false,
+  "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
+        { "path": "sketch_aug20a.ino.bootloader.bin", "offset": 4096 },
+        { "path": "sketch_aug20a.ino.partitions.bin", "offset": 32768 },
         { "path": "firmware.bin", "offset": 65536 }
       ]
     }
