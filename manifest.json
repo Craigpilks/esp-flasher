@@ -1,17 +1,48 @@
-{
-  "name": "Blink Test",
-  "version": "1.0",
-  "new_install_prompt_erase": true,
-  "builds": [
-    {
-      "chipFamily": "ESP32",
-      "parts": [
-        { "path": "sketch_aug20a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_aug20a.ino.partitions.bin", "offset": 32768 },
-        { "path": "firmware.bin", "offset": 65536 }
-      ]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 Classroom Flasher</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f4f6f8;
+      color: #333;
     }
-  ]
-}
+    h1 {
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>ESP32 Classroom Flasher</h1>
 
+  <div class="card">
+    <h2>1. Reset / Clear Board</h2>
+    <p>Uploads a blank sketch to stop any running code and clear the ESP32.</p>
+    <esp-web-install-button manifest="manifest-reset.json"></esp-web-install-button>
+  </div>
+
+  <div class="card">
+    <h2>2. Lab 1: LED Blink</h2>
+    <p>Flashes a continuous blinking light on the onboard LED (Pin 2).</p>
+    <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+  </div>
+
+</body>
+</html>
