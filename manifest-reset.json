@@ -1,33 +1,14 @@
 {
-  "name": "Classroom ESP32 Programs",
+  "name": "Reset / Clear Board",
   "version": "1.0",
   "new_install_prompt_erase": true,
   "builds": [
     {
-      "name": "Reset / Clear Board",
-      "version": "1.0",
+      "chipFamily": "ESP32",
       "parts": [
         { "path": "sketch_aug20a.ino.bootloader.bin", "offset": 4096 },
         { "path": "sketch_aug20a.ino.partitions.bin", "offset": 32768 },
         { "path": "reset.bin", "offset": 65536 }
-      ]
-    },
-    {
-      "name": "Blink Test",
-      "version": "1.0",
-      "parts": [
-        { "path": "sketch_aug20a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_aug20a.ino.partitions.bin", "offset": 32768 },
-        { "path": "firmware.bin", "offset": 65536 }
-      ]
-    },
-    {
-      "name": "Lab 2: New Sketch (GPIO 15)",
-      "version": "1.0",
-      "parts": [
-        { "path": "sketch_sep13a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_sep13a.ino.partitions.bin", "offset": 32768 },
-        { "path": "sketch_sep13a.ino.bin", "offset": 65536 }
       ]
     }
   ]
