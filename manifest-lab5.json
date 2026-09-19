@@ -6,8 +6,8 @@
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "sketch_sep13a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_sep13a.ino.partitions.bin", "offset": 32768 },
+        { "path": "sketch_sep18c.ino.bootloader.bin", "offset": 4096 },
+        { "path": "sketch_sep18c.ino.partitions.bin", "offset": 32768 },
         { "path": "Lab5-OLED.bin", "offset": 65536 }
       ]
     }
