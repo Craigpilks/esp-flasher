@@ -1,14 +1,14 @@
 {
-  "name": "Lab 2: New Sketch (GPIO 15)",
+  "name": "Blink LED — With Code",
   "version": "1.0",
   "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "sketch_sep13a.ino.bootloader.bin", "offset": 4096 },
-        { "path": "sketch_sep13a.ino.partitions.bin", "offset": 32768 },
-        { "path": "lab2.bin", "offset": 65536 }
+        { "path": "sketch_aug20a.ino.bootloader.bin", "offset": 4096 },
+        { "path": "sketch_aug20a.ino.partitions.bin", "offset": 32768 },
+        { "path": "firmware.bin", "offset": 65536 }
       ]
     }
   ]
