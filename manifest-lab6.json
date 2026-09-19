@@ -1,0 +1,16 @@
+{
+  "name": "Lab 6: OLED Image",
+  "version": "1.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "Lab6-Merged.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
