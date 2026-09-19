@@ -8,7 +8,7 @@
       "parts": [
         { "path": "sketch_sep18c.ino.bootloader.bin", "offset": 4096 },
         { "path": "sketch_sep18c.ino.partitions.bin", "offset": 32768 },
-        { "path": "Lab5-OLED.bin", "offset": 65536 }
+        { "path": "Lab5-OLED-NEW.bin", "offset": 65536 }
       ]
     }
   ]
