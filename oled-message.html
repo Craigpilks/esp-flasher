@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP32 OLED Message</title>
+</head>
+
+<body>
+
+  <h1>ESP32 OLED Message</h1>
+
+  <button id="connectButton">Connect ESP32</button>
+
+  <br><br>
+
+  <input
+    id="message"
+    type="text"
+    placeholder="Type your message"
+  >
+
+  <button id="sendButton">Send to OLED</button>
+
+  <p id="status">Not connected</p>
+
+<script>
+
+let port;
+let writer;
+
+// CONNECT TO ESP32
+document.getElementById("connectButton").addEventListener("click", async () => {
+
+  try {
+
+    port = await navigator.serial.requestPort();
+
+    await port.open({ baudRate: 115200 });
+
+    writer = port.writable.getWriter();
+
+    document.getElementById("status").textContent =
+      "ESP32 Connected!";
+
+  } catch (error) {
+
+    document.getElementById("status").textContent =
+      "Connection failed: " + error;
+
+  }
+
+});
+
+
+// SEND MESSAGE TO OLED
+document.getElementById("sendButton").addEventListener("click", async () => {
+
+  if (!writer) {
+
+    document.getElementById("status").textContent =
+      "Connect the ESP32 first.";
+
+    return;
+  }
+
+  const message =
+    document.getElementById("message").value;
+
+  const data =
+    new TextEncoder().encode(message + "\n");
+
+  await writer.write(data);
+
+  document.getElementById("status").textContent =
+    "Sent: " + message;
+
+});
+
+</script>
+
+</body>
+</html>
