@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>ESP32 Classroom Flasher</title>
-  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+  </script>
+
   <style>
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
+      max-width: 650px;
       margin: 40px auto;
       padding: 0 20px;
       background: #f4f6f8;
       color: #333;
     }
+
     h1 {
       text-align: center;
+      margin-bottom: 30px;
     }
+
     .card {
       background: white;
       padding: 20px;
@@ -23,50 +33,170 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     .card h2 {
       margin-top: 0;
     }
+
+    .tool-link {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 16px;
+      background: #eeeeee;
+      color: #0066cc;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .tool-link:hover {
+      background: #dddddd;
+    }
+
+    .coming-soon {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
+
+
 <body>
 
   <h1>ESP32 Classroom Flasher</h1>
 
+
+  <!-- ===================================== -->
+  <!-- RESET                                 -->
+  <!-- ===================================== -->
+
   <div class="card">
+
     <h2>1. Reset / Clear Board</h2>
-    <p>Uploads a blank sketch to stop any running code and clear the ESP32.</p>
-    <esp-web-install-button manifest="manifest-reset.json"></esp-web-install-button>
+
+    <p>
+      Uploads a blank sketch to stop any running code
+      and clear the ESP32.
+    </p>
+
+    <esp-web-install-button
+      manifest="manifest-reset.json">
+    </esp-web-install-button>
+
   </div>
 
+
+  <!-- ===================================== -->
+  <!-- BLINK                                 -->
+  <!-- ===================================== -->
+
   <div class="card">
+
     <h2>2. Blink LED — With Code</h2>
-    <p>Flashes a continuous blinking light on the ESP32.</p>
-    <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+
+    <p>
+      Flashes a continuous blinking light on the ESP32.
+    </p>
+
+    <esp-web-install-button
+      manifest="manifest.json">
+    </esp-web-install-button>
+
   </div>
+
+
+  <!-- ===================================== -->
+  <!-- LAB 2                                 -->
+  <!-- ===================================== -->
 
   <div class="card">
+
     <h2>3. Lab 2: New Sketch (GPIO 15)</h2>
-    <p>Uploads your new LED sketch connected to GPIO 15.</p>
-    <esp-web-install-button manifest="manifest-lab2.json"></esp-web-install-button>
+
+    <p>
+      Uploads your new LED sketch connected to GPIO 15.
+    </p>
+
+    <esp-web-install-button
+      manifest="manifest-lab2.json">
+    </esp-web-install-button>
+
   </div>
 
-<div class="card">
+
+  <!-- ===================================== -->
+  <!-- TRAFFIC LIGHT                         -->
+  <!-- ===================================== -->
+
+  <div class="card">
+
     <h2>4. Lab 4: Traffic Light</h2>
-    <p>Sequences Red, Yellow, and Green LEDs like a traffic signal.</p>
-    <esp-web-install-button manifest="manifest-lab4.json"></esp-web-install-button>
+
+    <p>
+      Sequences Red, Yellow, and Green LEDs
+      like a traffic signal.
+    </p>
+
+    <esp-web-install-button
+      manifest="manifest-lab4.json">
+    </esp-web-install-button>
+
   </div>
-<div class="card">
-  <h2>5. Lab 5: OLED Message</h2>
-  <p>Install the OLED firmware, then create your own message on the OLED display.</p>
 
-  <esp-web-install-button manifest="manifest-lab5.json"></esp-web-install-button>
 
-  <br><br>
-<br><br>
+  <!-- ===================================== -->
+  <!-- LAB 5 - OLED MESSAGE                  -->
+  <!-- ===================================== -->
 
-  <a href="oled-image-test.html">Open ESP32 OLED Image Studio</a>
-  <a href="oled-message.html">Open ESP32 OLED Message</a>
-</div>
-  
- </body>
+  <div class="card">
+
+    <h2>5. Lab 5: OLED Message</h2>
+
+    <p>
+      Install the OLED firmware, then create your own
+      message on the OLED display.
+    </p>
+
+    <esp-web-install-button
+      manifest="manifest-lab5.json">
+    </esp-web-install-button>
+
+    <br>
+
+    <a class="tool-link"
+       href="oled-message.html">
+       Open OLED Message
+    </a>
+
+  </div>
+
+
+  <!-- ===================================== -->
+  <!-- LAB 6 - OLED IMAGE                    -->
+  <!-- ===================================== -->
+
+  <div class="card">
+
+    <h2>6. Lab 6: OLED Image</h2>
+
+    <p>
+      Send a 128×64 black-and-white picture
+      to the OLED display.
+    </p>
+
+    <p class="coming-soon">
+      Lab 6 firmware coming next.
+    </p>
+
+    <a class="tool-link"
+       href="oled-image-test.html">
+       Open OLED Image Studio
+    </a>
+
+  </div>
+
+
+</body>
+
 </html>
